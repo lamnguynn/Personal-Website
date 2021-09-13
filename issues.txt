@@ -1,0 +1,7 @@
+Known issues:
+    Font issues on Portfolio page title text
+    Text off center on About me
+    Image center on home page
+
+Future features:
+    Animations

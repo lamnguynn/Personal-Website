@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Lam's Portfolio </title>
+        <link rel="stylesheet" href="css/portfolioStyle.css" id="theme">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" />
+    </head>
+
+    <body> 
+
+        <!-- Banner -->
+        <header> 
+            <a href="index.html" class="logo"> Lam </a>
+            <div id="menu-icon" class="fas fa-bars"></div>
+            
+            <ul class="navbar">
+                <li> <a href="index.html"> Home </a></li>
+                <li> <a href="about.html"> About </a></li>
+                <li> <a href="portfolio.html"> Portfolio </a> </li>
+                <li> <a href="professional.html"> Professional</a></li>
+                <li> <a href="service.html"> Service </a></li>
+            </ul>
+        </header>
+
+        <!-- Projects -->
+        <section class="projects" id="projects">
+            <div class="projects-content">
+                <h1 style="color: #49C3D1; text-align: center;">Projects</h1>
+                
+                <!-- Dots -->
+                <div style="text-align:center">
+                    <span class="dot" onclick="currentSlide(1)">1</span>
+                    <span class="dot" onclick="currentSlide(2)">2</span>
+                    <span class="dot" onclick="currentSlide(3)">3</span>
+                    <span class="dot" onclick="currentSlide(4)">4</span>
+                    <span class="dot" onclick="currentSlide(5)">5</span>
+                    <span class="dot" onclick="currentSlide(6)">6</span>
+                    <br> <br>
+                  </div>
+
+                <!-- All Keys -->
+                <div class="projects-box" id="allpass">
+                    <img src="img/allpass.png" style="border-radius: 1.2rem; width: 160px; height: 160px; padding: 5px; background: #49789C;">
+
+                    <div class="box-texts">
+                        <h2> All Keys </h2>
+                        <p style="color: #CACACA;"> Swift, UIKit </p>
+                        <p> 
+                            All Keys is a password manager that allows users to store their credentials securely and utilize them using auto fill. My motivation for making this app was to provide myself and others with a simple and accessible way to store their passwords without having to pay or use the Notes app. I definitely felt this project solidified my knowledge in Swift and built my confidence more as most of the features I had implemented were new and had to be done perfectly to ensure trust from users, and avoid a lawsuit. 
+                            <br><br>
+                            <span style="color: #49C3D1;"> Things I learned: </span>
+                        </p>
+                        <ul class="learned" style="list-style: square;">
+                            <li> <span style="color:#BCBCBC">Core Data</span>, Keychain, and testing out Realm </li>
+                            <li> Using <span style="color:#BCBCBC">App Store Connect</span> and Publishing</li>
+                            <li> Working with entitlements such as App Groups and Keychain Sharing </li>
+                            <li> Programmatically creating view controllers and mastering <span style="color: #BCBCBC"> Auto Layout</span> </li>
+                            <li> <span style="color:#BCBCBC">Grand Central Dispatch</span> and <span style="color:#BCBCBC">Automatic Reference Counting</span> </li>
+                            <li> Using UNUserNotificationCenter to add and send notifications </li>
+                            <li> Learned <span style="color:#BCBCBC">Git</span> to upload custom frameworks</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Cocoapods -->
+                <div class="projects-box" id="cocoapod" style="margin: 60px 0;">
+                    <img src="img/cocoapods.png" style="border-radius: 1.2rem; width: 160px; height: 160px; padding: 5px; background: #E2E2E2;">
+
+                    <div class="box-texts">
+                        <h2> Cocoapod Dependencies </h2>
+                        <p style="color: #CACACA;"> Swift, Ruby </p>
+                        <p> 
+                            From building my apps, I have been able to publish two Cocoapods as a side project: a HalfModalViewController and DropDownButton. My motivation for doing so is that Apple does not provide any options for either to enhance the user experience, so I decided to build my own. Doing so was quite challenging as I had to really break down how each framework would work fundamentally and piece it together. I also learned Git and worked extensively with Unix Terminal to clean and upload these dependencies. 
+                            <br><br>
+                            <span style="color: #49C3D1;"> Things I learned: </span>
+                        </p>
+                        <ul class="learned" style="list-style: square;">
+                            <li> Git commands to upload dependencies </li>
+                            <li> Using pod commands to clean and publish dependencies </li>
+                            <li> Learning <span style="color:#BCBCBC">Ruby</span> to make podspec file </li>
+                            <li> <span style="color:#BCBCBC">SOLID Principles</span> and Encapsulation </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- All Fit-->
+                <div class="projects-box" id="allfit" style="margin: 60px 0;">
+                    <img src="img/allfit.png" style="border-radius: 1.2rem; width: 160px; height: 160px; padding: 5px; background: #C1C1C1;">
+
+                    <div class="box-texts">
+                        <h2> All Fit </h2>
+                        <p style="color: #CACACA;"> Swift, UIKit </p>
+                        <p> 
+                            All Fit is a fitness planning app that allows users to build their workouts with pre-added exercises or they can add their own, and it is the first app I published. My motivation for building this app was that I was tired of using the Notes app to plan my workouts and wanted to create something more clean and apply my recent Swift knowledge. Building this project was definitely a challenge as I had a couple weeks of experience in basic Swift and had no experience with App Store Connect. But overall I used this project as a chance to explore Apple’s frameworks and publishing process, as well as Xcode.
+                            <br><br>
+                            <span style="color: #49C3D1;"> Things I learned: </span>
+                        </p>
+                        <ul class="learned" style="list-style: square;">
+                            <li> <span style="color:#BCBCBC">Core Data</span> to persist data </li>
+                            <li> Using App Store Connect and Publishing</li>
+                            <li> Using Storyboard to build view controllers, and learning <span style="color:#BCBCBC">Auto Layout.</span> </li>
+                            <li> Building custom <span style="color:#BCBCBC">segues</span> and making animations </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- All Planned-->
+                <div class="projects-box" id="allplanned" style="margin: 60px 0;">
+                    <img src="img/allplanned.png" style="border-radius: 1.2rem; width: 160px; height: 160px; padding: 5px; background: #8E8E8E;">
+
+                    <div class="box-texts">
+                        <h2> All Planned </h2>
+                        <p style="color: #CACACA;"> Swift </p>
+                        <p> 
+                            All Planned is a weekly planning app I designed for HowdyHack 2021 that allows users to plan and save whatever tasks they have for the week. Following the release of All Fit, I used this app to build some soft skills like planning and organization, as well as working with new features such as Dates and Times and UNUserNotificationCenter frameworks from Apple.
+                            <br><br>
+                            <span style="color: #49C3D1;"> Things I learned: </span>
+                        </p>
+                        <ul class="learned" style="list-style: square;">
+                            <li> <span style="color:#BCBCBC">Core Data</span> to persist data </li>
+                            <li> Using Testflight </li>
+                            <li> Mastering Storyboard and <span style="color:#BCBCBC">Auto Layout</span> to build view controllers </li>
+                            <li> Diving into <span style="color:#BCBCBC">Grand Central Dispatch</span> and efficiency </li>
+                            <li> Using <span style="color:#BCBCBC">UNUserNotificationCenter</span> to add and send notifications </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Python Yah -->
+                <div class="projects-box" id="yah" style="margin: 60px 0;">
+                    <img src="img/pyYah.png" style="border-radius: 1.2rem; width: 160px; height: 160px; padding: 5px; background: #E2E2E2;">
+
+                    <div class="box-texts">
+                        <h2> Python Pahtzee GUI Game  </h2>
+                        <p style="color: #CACACA;"> Python</p>
+                        <p> 
+                            GUI-based Python game I developed in freshman year. Originally this project was given as an assignment for one of my courses, but was designed to be played in plain-text, which I thought was boring so I decided to build a GUI version around the existing code.
+                            <br><br>
+                            <span style="color: #49C3D1;"> Things I learned: </span>
+                        </p>
+                        <ul class="learned" style="list-style: square;">
+                            <li> <span style="color:#BCBCBC">Tkinter</span> to build a GUI </li> 
+                            <li> Strengthen soft skills such as planning</li>                         
+                        </ul>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                    </div>
+                </div>
+
+                <!-- Zoom Launcher Chrome Extension -->
+                <div class="projects-box" id="zoom-launch" style="margin: 60px 0;">
+                    <img src="img/zoom.png" style="border-radius: 1.2rem; width: 160px; height: 160px; padding: 5px; background: #179BFF;">
+
+                    <div class="box-texts">
+                        <h2> Zoom Launcher Chrome Extension  </h2>
+                        <p style="color: #CACACA;"> HTML, CSS, Javascript </p>
+                        <p> 
+                            Google Chrome extension to more conveniently launch zoom links. I developed this at the start of the transition to online classes in late March 2020, and integrated Font-Awesome to act as an icon for each link; for example, flask icon for any science class. 
+                            <br><br>
+                            <span style="color: #49C3D1;"> Things I learned: </span>
+                        </p>
+                        <ul class="learned" style="list-style: square;">
+                            <li> Using CSS to style my pages</li>
+                            <li> Building and uploading an extension to Chrome </li>
+                        </ul>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Copyright -->
+        <div class="copyright">
+            <p>&#169; <a href="secret.html"> Lam Nguyen </a> | All Rights Reserved <br> <p id="toggle"> Toggle Theme </p> </p>
+        </div>
+
+        <script src="js/portfolio.js"></script>
+    </body>
+</html>  

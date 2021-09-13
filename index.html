@@ -1,0 +1,199 @@
+<!-- Useful Links -->
+<!-- Animations: https://www.w3schools.com/js/js_htmldom_animate.asp -->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Welcome to Lam's Personal Website</title>
+        <link rel="stylesheet" href="css/style.css" id="theme">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" />
+    </head>
+    <body>
+
+        <!-- Banner -->
+        <header id="header"> 
+            <a href="index.html" class="logo"> Lam </a>
+            <div id="menu-icon" class="fas fa-bars"></div>
+            
+            <ul class="navbar">
+                <li> <a href="index.html"> Home </a></li>
+                <li> <a href="about.html"> About </a></li>
+                <li> <a href="portfolio.html"> Portfolio </a> </li>
+                <li> <a href="professional.html"> Professional</a></li>
+                <li> <a href="service.html"> Service </a></li>
+            </ul>
+        </header>
+
+        <!-- Home -->
+        <section class="home" id="home">
+            <div class="home-content">
+                <div class="home-text">
+                    <h1> Welcome to <span style="color: #49C3D1;">Lam Nguyen's</span> <br> Personal Website! </h1>
+                    <p> I am a Junior Computer Science student at Texas A&M University. Currently I am interested in Native iOS Development and outside of that, sneakers and outdoors. </p>
+                </div>
+
+                <div class="home-img">
+                    <img src="img/profPic.png" alt="Profile Picture" class="profilePic" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 15px 20px 0 rgba(0, 0, 0, 0.19);">
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills -->
+        <section class="skills" id="skills">
+            <div class="heading">
+                <h1>Skills</h1> 
+            </div>
+            <div class="skills-text">
+                <p> Below are the languages I am proficient in and am confident working in: </p>
+            </div>
+            
+            <!-- Technical Skills content -->
+            <div class="skills-content">
+                <div class="skills-box">
+                    <i class="fab fa-swift"> <h3> Swift </h3></i>
+                </div>
+                <div class="skills-box">
+                    <i class="fab fa-python"> <h3> Python  </h3></i>
+                </div>
+                <div class="skills-box">
+                    <i class="fab fa-cuttlefish"> <h3> C++/C </h3></i>
+                </div>
+                <div class="skills-box">
+                    <i class="fab fa-java"> <h3> Java </h3></i>
+                </div>
+                <div class="skills-box">
+                    <i class="fab fa-html5"> <h3> HTML </h3></i>
+                </div>
+                <div class="skills-box">
+                    <i class="fab fa-css3"> <h3> CSS </h3></i>
+                </div>
+            </div>
+
+            <!-- Soft Skills content -->
+            <div class="soft-skills-text">
+                <p> Below are some of the soft skills I have: </p>
+            </div>
+
+            <div class="soft-skills-content">
+                <div class="skills-box">
+                    <i class="fas fa-assistive-listening-systems"> <h3> Actively listening </h3></i>
+                </div>
+                <div class="skills-box">
+                    <i class="fas fa-clipboard-check"> <h3> Responsible </h3></i>
+                </div>
+                <div class="skills-box">
+                    <i class="fas fa-running"> <h3> Motivated </h3></i>
+                </div>
+                <div class="skills-box">
+                    <i class="fas fa-exclamation"> <h3> Strong Bias for Action </h3></i>
+                </div>
+            </div>
+
+        </section>
+        
+        <!-- Portfolio -->
+        <section class="portfolio" id="portfolio">
+            <div class="heading">
+                <h1>Featured Projects</h1>
+            </div>
+            <div class="portfolio-text">
+                <p> Below are some of my featured projects. To learn more, please click on the portfolio tab or click on one to be redirected to the App Store or Github. </p>
+            </div>
+
+            <!-- Portfolio content -->
+            <div class="portfolio-content">
+                <!-- All Keys-->
+                <div class="p-box" id="allkeys">
+                    <div class="p-img">
+                        <img src="img/allpass.png" alt="">
+                    </div>
+                    <h2> All Keys </h2>
+                    <p> Developed and published a password manager app that allows users to store and utilize them via auto fill.</p>
+                </div>
+                
+                <!-- All Fit -->
+                <div class="p-box" id="allfit">
+                    <div class="p-img">
+                        <img src="img/allfit.png" alt="">
+                    </div>
+                    <h2> All Fit </h2>
+                    <p> Developed and published a simple fitness planning app that allows users to plan workouts with pre-added exercises or add their own.</p>
+                </div>
+
+                <!-- All Planned -->
+                <div class="p-box" id="allplanned">
+                    <div class="p-img">
+                        <img src="img/allplanned.png" alt="">
+                    </div>
+                    <h2> All Planned </h2>
+                    <p> Developed a simple weekly to-do app for TAMUHack 2021 that allows users to more simply plan their week.</p>
+                </div>
+
+                <!-- Python Yahtzee Game -->
+                <div class="p-box" id="yahPy">
+                    <div class="p-img">
+                        <img src="img/pyYah.png" alt="">
+                    </div>
+                    <h2> Python Yahtzee Game </h2>
+                    <p> Developed a GUI-based Yahtzee game using tKinter.</p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Contact -->
+        <section class="contact" id="contact">
+            <div class="heading">
+                <h1>Contact</h1>
+            </div>
+            <!-- Contact content -->
+            <div class="contact-content">
+                <div class="contact-info">
+                    <!-- Phone -->
+                    <div class="info-box">
+                        <i class="fas fa-phone-alt"></i>
+                        <p>+1 512-993-4593</p>
+                    </div>
+
+                    <!-- Email -->
+                    <div class="info-box">
+                        <i class="fas fa-envelope-open"></i>
+                        <p>lam65nguyen@tamu.edu</p>
+                    </div>
+                    
+                    <!-- Location -->
+                    <div class="info-box">
+                        <i class="fas fa-map-marker"></i>
+                        <p>College Station, TX USA</p>
+                    </div>
+
+                    <!-- Other Links -->
+                    <div class="info-box social">
+                        <a href="https://www.linkedin.com/in/lamnguynn/" target="_blank"> <i class="fab fa-linkedin"></i></a>
+                        <a href="https://github.com/lamnguynn" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="https://twitter.com/bacmono" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.instagram.com/lamnguynn/" target="_blank"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+ 
+                <div class="contact-form">
+                    <form action="">
+                        <input type="text" placeholder="Enter Name: " id="contact-name">
+                        <input type="email" placeholder="Enter Email: " id="contact-email">
+                        <textarea name="" id="contact-message" cols="30" rows="10" placeholder="Write your message here..."></textarea>
+                        <input type="button" value="Send" class="contact-button">
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Copyright -->
+        <div class="copyright">
+            <p>&#169; <a href="secret.html"> Lam Nguyen </a> | All Rights Reserved <br> <p id="toggle"> Toggle Theme </p> </p>
+        </div>
+
+        <script src="js/main.js"></script>
+    </body>
+</html>
