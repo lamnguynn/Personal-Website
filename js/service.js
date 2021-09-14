@@ -29,13 +29,34 @@ if(localStorage.getItem("serviceTheme") != null){
 
 function toggle(){
 
-    //Switching themes
-    if (theme.href == "file:///Users/lamnguyen/Desktop/Personal%20Website/css/serviceAlt.css") {
-        theme.href = "file:///Users/lamnguyen/Desktop/Personal%20Website/css/service.css";
-    } else {
-        theme.href = "file:///Users/lamnguyen/Desktop/Personal%20Website/css/serviceAlt.css";
-    }
-
-    //Persist the data
-    localStorage.setItem("serviceTheme", theme.href);
+      //Check which color to swap to
+      var background, banner;
+      if(window.getComputedStyle(document.documentElement).getPropertyValue('--background') == '#49789C'){
+          background = '#376384';
+          banner = '#49789C';
+      }
+      else{
+          background = '#49789C';
+          banner = '#376384';
+      }
+  
+      //Set the color
+      document.documentElement.style.setProperty('--background', background)
+      document.documentElement.style.setProperty('--bannerColor', banner)
+  
+      //Persist the data
+      localStorage.setItem("background", background);
+      localStorage.setItem("banner", banner);
 }
+
+window.onload = function(){
+    let loadedBackground = localStorage.getItem("background");
+    let loadedBanner = localStorage.getItem("banner");
+    for (var a in localStorage) {
+        console.log(a, ' = ', localStorage[a]);
+     }
+
+    document.documentElement.style.setProperty('--background', loadedBackground);
+    document.documentElement.style.setProperty('--bannerColor', loadedBanner);
+}
+

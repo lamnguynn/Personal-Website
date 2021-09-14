@@ -29,8 +29,14 @@
     }
 }
 
+:root{
+    --background: #376384;
+    --bannerColor: #49789C;
+    --boxColor: #5C8DB2;
+}
+
 html{
-    background: #376384;
+    background: var(--background);
     color: lavender;
 }
 
@@ -51,7 +57,7 @@ section{
 }
 
 header{
-    background-color: #49789C;
+    background-color: var(--bannerColor);
     width: 100%;
     position: fixed;                /* Stays same place even if page is scrolled. */
     display: flex;
@@ -97,7 +103,7 @@ h1{
 }
 
 header .navbar a:hover{             /* Setting the hover color for the list items*/
-    background: #376384;
+    background: var(--background);
     color: #fff;
     border-radius: 0.8rem;
 }

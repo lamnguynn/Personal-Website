@@ -48,26 +48,42 @@ zoom.onclick = () => {
     window.open("https://github.com/lamnguynn/HTML-Zoom_Launcher_Chrome_Extension");
 }
 
+let sound = document.querySelector('#sound-surfers');
+sound.onclick = () => {
+    window.open("https://github.com/AlexanderHallCS/Sound-Surfers");
+}
+
 /* 
     Toggle Theme
 */
 let toggleButton = document.getElementById("toggle");
-let theme = document.getElementById("theme");
-
-//Error handling. Only load the persistent data whenever it is set
-if(localStorage.getItem("portTheme") != null){
-    theme.href = localStorage.getItem("portTheme");
-}
 
 toggleButton.onclick = () => {
-    if (theme.href == "file:///Users/lamnguyen/Desktop/Personal%20Website/css/portfolioAlt.css") {
-        theme.href = "file:///Users/lamnguyen/Desktop/Personal%20Website/css/portfolioStyle.css";
-    } else {
-        theme.href = "file:///Users/lamnguyen/Desktop/Personal%20Website/css/portfolioAlt.css";
+    //Check which color to swap to
+    var background, banner;
+    if(window.getComputedStyle(document.documentElement).getPropertyValue('--background') == '#49789C'){
+        background = '#376384';
+        banner = '#49789C';
+    }
+    else{
+        background = '#49789C';
+        banner = '#376384';
     }
 
+    //Set the color
+    document.documentElement.style.setProperty('--background', background)
+    document.documentElement.style.setProperty('--bannerColor', banner)
+
     //Persist the data
-    localStorage.setItem("portTheme", theme.href);
+    localStorage.setItem("background", background);
+    localStorage.setItem("banner", banner);
+}
+
+window.onload = function(){
+    let loadedBackground = localStorage.getItem("background");
+    let loadedBanner = localStorage.getItem("banner");
+    document.documentElement.style.setProperty('--background', loadedBackground);
+    document.documentElement.style.setProperty('--bannerColor', loadedBanner);
 }
 
 
@@ -78,18 +94,21 @@ toggleButton.onclick = () => {
 
 function currentSlide(n) {
     if(n == 2){
-        document.getElementById('allfit').scrollIntoView();
-    }
-    else if(n == 3){
-        document.getElementById('allplanned').scrollIntoView();
-    }
-    else if(n == 4){
         document.getElementById('cocoapod').scrollIntoView();
     }
+    else if(n == 3){
+        document.getElementById('allfit').scrollIntoView();
+    }
+    else if(n == 4){
+        document.getElementById('sound-surfers').scrollIntoView();
+    }
     else if(n == 5){
-        document.getElementById('yah').scrollIntoView();
+        document.getElementById('allplanned').scrollIntoView();
     }
     else if(n == 6){
+        document.getElementById('yah').scrollIntoView();
+    }
+    else if(n == 7){
         document.getElementById('zoom-launch').scrollIntoView();
     }
 }

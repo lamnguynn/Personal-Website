@@ -31,11 +31,16 @@
 }
 
 
-html{
-    background: #376384;
-    color: lavender;
+:root{
+    --background: #376384;
+    --bannerColor: #49789C;
+    --boxColor: #5C8DB2;
 }
 
+html{
+    background: var(--background);
+    color: lavender;
+}
 section{
     padding: 50px 100px;            /* Top left/right*/
 }
@@ -53,7 +58,7 @@ section{
 }
 
 header{
-    background-color: #49789C;
+    background-color: var(--bannerColor);
     width: 100%;
     position: fixed;                /* Stays same place even if page is scrolled. */
     display: flex;
@@ -98,7 +103,7 @@ h1{
 }
 
 header .navbar a:hover{             /* Setting the hover color for the list items*/
-    background: #376384;
+    background: var(--background);
     color: #fff;
     border-radius: 0.8rem;
 }
@@ -163,11 +168,16 @@ header .navbar a:hover{             /* Setting the hover color for the list item
 
 .projects{
     width: 100%;
-    animation: transitionIn 0.75s;
+    animation: transitionIn 0.75s; 
 }
 
 .projects-content{
     margin: 4rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 .projects-box{
@@ -178,12 +188,14 @@ header .navbar a:hover{             /* Setting the hover color for the list item
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-
+    
+    max-width: 70%;
     background: #5C8DB2;
     border-radius: 1rem;
     transition: all .55s ease;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(60, 60, 60, 0.19);
 }
+
 
 .projects-box:hover{
     transform: scale(1.05);
@@ -200,6 +212,14 @@ ul.learned li{
     margin: 0 15px;
     list-style-type: circle;
 }
+
+@media (max-width: 1495px){ 
+
+    .projects-box{
+        max-width: 100%;
+    }
+}
+
 
 /*********************/
 /*********************/
@@ -272,3 +292,4 @@ ul.learned li{
         padding: 50px 34px;
     }   
 }
+

@@ -21,20 +21,32 @@ window.onscroll = () => {
     Toggle Theme
 */
 let toggleButton = document.getElementById("toggle");
-let theme = document.getElementById("theme");
-
-//Error handling. Only load the persistent data whenever it is set
-if(localStorage.getItem("profTheme") != null){
-    theme.href = localStorage.getItem("profTheme");
-}
-
 toggleButton.onclick = () => {
-    if (theme.href == "file:///Users/lamnguyen/Desktop/Personal%20Website/css/professionalAlt.css") {
-        theme.href = "file:///Users/lamnguyen/Desktop/Personal%20Website/css/professional.css";
-    } else {
-        theme.href = "file:///Users/lamnguyen/Desktop/Personal%20Website/css/professionalAlt.css";
+    //Check which color to swap to
+    var background, banner;
+    if(window.getComputedStyle(document.documentElement).getPropertyValue('--background') == '#49789C'){
+        background = '#376384';
+        banner = '#49789C';
+    }
+    else{
+        background = '#49789C';
+        banner = '#376384';
     }
 
+    //Set the color
+    document.documentElement.style.setProperty('--background', background)
+    document.documentElement.style.setProperty('--bannerColor', banner)
+
     //Persist the data
-    localStorage.setItem("profTheme", theme.href);
+    localStorage.setItem("background", background);
+    localStorage.setItem("banner", banner);
+
+    console.log(localStorage.getItem("background"));
+}
+
+window.onload = function(){
+    let loadedBackground = localStorage.getItem("background");
+    let loadedBanner = localStorage.getItem("banner");
+    document.documentElement.style.setProperty('--background', loadedBackground);
+    document.documentElement.style.setProperty('--bannerColor', loadedBanner);
 }
